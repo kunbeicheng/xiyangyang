@@ -183,12 +183,18 @@ function huanye(){
 	bianse();
 	var j=locat.length-3*idnum;
 	if (j>=3) {j=3;}
-	for (var i=0;i<j;i++) {
-		redele[i].setAttribute('redeleid',locat[locat.length-(1+i)-3*idnum]['reID']);
-		renames[i].innerHTML=locat[locat.length-(1+i)-3*idnum]['name'];
-		retexts[i].innerHTML=locat[locat.length-(1+i)-3*idnum]['textvalues'];
-		retimes[i].innerHTML=locat[locat.length-(1+i)-3*idnum]['timer'];
-		rephotos[i].setAttribute('src',locat[locat.length-(1+i)-3*idnum]['imginfo']);
+	for (var i=0;i<3;i++) {
+		nore.style.display='none';
+		if (i<j) {
+			rescans[i].style.display='block';
+			redele[i].setAttribute('redeleid',locat[locat.length-(1+i)-3*idnum]['reID']);
+			renames[i].innerHTML=locat[locat.length-(1+i)-3*idnum]['name'];
+			retexts[i].innerHTML=locat[locat.length-(1+i)-3*idnum]['textvalues'];
+			retimes[i].innerHTML=locat[locat.length-(1+i)-3*idnum]['timer'];
+			rephotos[i].setAttribute('src',locat[locat.length-(1+i)-3*idnum]['imginfo']);
+		}else{
+			rescans[i].style.display='none';
+		}
 	}
 }
 //上一页
@@ -200,12 +206,18 @@ leftb.onclick=function(){
 		bianse();
 		var j=locat.length-3*reidnum;
 		if (j>=3) {j=3;}
-		for (var i=0;i<j;i++) {
-			redele[i].setAttribute('redeleid',locat[locat.length-(1+i)-3*reidnum]['reID']);
-			renames[i].innerHTML=locat[locat.length-(1+i)-3*reidnum]['name'];
-			retexts[i].innerHTML=locat[locat.length-(1+i)-3*reidnum]['textvalues'];
-			retimes[i].innerHTML=locat[locat.length-(1+i)-3*reidnum]['timer'];
-			rephotos[i].setAttribute('src',locat[locat.length-(1+i)-3*reidnum]['imginfo']);
+		for (var i=0;i<3;i++) {
+			nore.style.display='none';
+			if (i<j) {
+				rescans[i].style.display='block';
+				redele[i].setAttribute('redeleid',locat[locat.length-(1+i)-3*reidnum]['reID']);
+				renames[i].innerHTML=locat[locat.length-(1+i)-3*reidnum]['name'];
+				retexts[i].innerHTML=locat[locat.length-(1+i)-3*reidnum]['textvalues'];
+				retimes[i].innerHTML=locat[locat.length-(1+i)-3*reidnum]['timer'];
+				rephotos[i].setAttribute('src',locat[locat.length-(1+i)-3*reidnum]['imginfo']);
+			}else{
+				rescans[i].style.display='none';
+			}
 		}
 	}else{
 		alert('已经到第一页了');
@@ -220,12 +232,18 @@ rightb.onclick=function(){
 		bianse();
 		var j=locat.length-3*reidnum;
 		if (j>=3) {j=3;}
-		for (var i=0;i<j;i++) {
-			redele[i].setAttribute('redeleid',locat[locat.length-(1+i)-3*reidnum]['reID']);
-			renames[i].innerHTML=locat[locat.length-(1+i)-3*reidnum]['name'];
-			retexts[i].innerHTML=locat[locat.length-(1+i)-3*reidnum]['textvalues'];
-			retimes[i].innerHTML=locat[locat.length-(1+i)-3*reidnum]['timer'];
-			rephotos[i].setAttribute('src',locat[locat.length-(1+i)-3*reidnum]['imginfo']);
+		for (var i=0;i<3;i++) {
+			nore.style.display='none';
+			if (i<j) {
+				rescans[i].style.display='block';
+				redele[i].setAttribute('redeleid',locat[locat.length-(1+i)-3*reidnum]['reID']);
+				renames[i].innerHTML=locat[locat.length-(1+i)-3*reidnum]['name'];
+				retexts[i].innerHTML=locat[locat.length-(1+i)-3*reidnum]['textvalues'];
+				retimes[i].innerHTML=locat[locat.length-(1+i)-3*reidnum]['timer'];
+				rephotos[i].setAttribute('src',locat[locat.length-(1+i)-3*reidnum]['imginfo']);
+			}else{
+				rescans[i].style.display='none';
+			}
 		}
 	}else{
 		alert('已经到最后一页了，没有更多评论了');
