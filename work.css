@@ -1,0 +1,428 @@
+@keyframes rotate_animation{
+				0%{
+					transform: rotate(0deg);
+				}
+				100%{
+					transform: rotate(360deg);
+				}
+			}
+.top_part {
+	align-items: center;
+	background: #000;
+	display: flex;
+	justify-content: space-between;
+}
+.blank {
+	flex: 0.5;
+}
+.top_photo {
+	flex: 1;
+}
+.wenzi {
+	flex: 3;
+	color: white;
+	font-size: 20px;
+	justify-content: space-around;
+	display: flex;
+}
+.wenzi div:first-child {
+	color: orange;
+}
+.top_center_star {
+	justify-content: space-around;
+	display: flex;
+	flex: 4;
+}
+.star_word {
+	align-items: center;
+	display: inline-flex;
+	color: white;
+	font-size: 16px;
+}
+.star_image {
+	display: block;
+	background-repeat: no-repeat;
+	height: 16px;
+	width: 16px;
+	background-image: url(images/sty.png);
+	background-position: -230px -26px;
+}
+.bottom_photo {
+	position: relative;
+	flex: 2;
+}
+.bottom_photo:after {
+	position: absolute;
+	content: "找到好音乐";
+	color: grey;
+	top: 1px;
+	left: 10px;
+}
+.center_part {
+	height: 900px;
+	width: 100%;
+}
+.center_left {
+	float: left;
+	text-align: center;
+	width: 60%;
+}
+.song_title {
+	font-size: 20px;
+	height: 160px;
+	background: white;
+}
+.song_name {
+	color: black;
+	height: 60px;
+	line-height: 60px;
+	padding-top: 40px;
+}
+.song_info {
+	align-items: center;
+	margin: 0 auto;
+	width: 50%;
+	height: 34px;
+	display: flex;
+	justify-content: space-around;
+	font-size: 14px;
+}
+.song_info span {
+	color: orange;
+}
+.song_time {
+	margin: 0 auto;
+	width: 100%;
+	height: 25px;
+	font-size: 12px;
+	border-bottom: darkgray solid 1px;
+}
+.song_words{
+	padding-right: 10%;
+	padding-left: 10%;
+	text-align: center;
+	overflow-x: hidden;
+	overflow-y: auto;
+	width: 80%;
+	height: 500px;
+}
+.song_words::-webkit-scrollbar{
+	width: 5px;
+}
+.song_words::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+.song_words p{
+	display: block;
+	width: 100%;
+}
+.center_right{
+	height: 600px;
+	float: left;
+	width: 40%;
+}
+.rotate_photoplay{
+	overflow: hidden;
+	width: 300px;
+	height: 300px;
+	margin: 80px auto;
+	border-radius: 50%;
+	animation: rotate_animation 10s linear infinite;
+}
+.rotate_photo{
+	overflow: hidden;
+	width: 300px;
+	height: 300px;
+	margin: 80px auto;
+	border-radius: 50%;
+}
+.active {
+  animation-play-state: running;
+}
+.paused {
+  animation-play-state: paused;
+}
+.button_box{
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100px;
+}
+.play{
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+	left: 80px;
+	float: left;
+	background-repeat: no-repeat;
+	background-image: url(images/playphoto.jpg);
+	width: 40px;
+	height: 40px;
+	background-position: -110px 0px
+}
+.zan{
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+	left: 80px;
+	float: left;
+	background-repeat: no-repeat;
+	background-image: url(images/playphoto.jpg);
+	width: 40px;
+	height: 40px;
+	background-position: -207px 0px
+}
+#prograssBar{
+	float: left;
+	position: relative;
+	width: 70%;
+	height: 40px;
+	left: 130px;
+}
+#bar{
+	z-index: 100;
+	float: left;
+	top: 17px;
+	position: absolute;
+	height: 6px;
+	width: 0;
+	background: darkorange;
+}
+.prograssBar {
+	background: gainsboro;
+	border-radius: 10px 10px 10px 10px;
+	top: 17px;
+	position: absolute;
+	width: 80%;
+	height: 6px;
+}
+#processBtn {
+	width: 10px;
+	height: 10px;
+	background: url(images/sty.png) 0 -128px;
+	position: absolute;
+	top: 15px;
+}
+#play_time {
+	left:82%;
+	float: right;
+	width: 10%;
+	height: 38px;
+	line-height: 38px;
+	position: absolute;
+	font-size: 12px;
+	color: darkgrey;
+}
+.sound{
+	position: absolute;
+	top: 10px;
+	left: 92%;
+}
+.sound_mute{
+	font-size: 18px;
+	color: gainsboro;
+	background-repeat: no-repeat;
+	background-image: url(images/playphoto.jpg);
+	width: 25px;
+	height: 18px;
+	background-position: -42px 0px;
+}
+.sound_unmute{
+	background-repeat: no-repeat;
+	background-image: url(images/playphoto.jpg);
+	width: 15px;
+	height: 18px;
+	background-position: -42px 0px;
+}
+.download{
+	position: relative;
+	margin: 0px auto;
+	height: 42px;
+	width: 200px;
+	background-image: url(images/playphoto.jpg);
+	background-repeat: no-repeat;
+	background-position: 0 -46px;
+}
+#dowload_photo{
+	position: absolute;
+	top: 10px;
+	left: 30px;
+	width: 19px;
+	height: 19px;
+	display: block;
+	background-image: url(images/playphoto.jpg);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+#dowload_words{
+	position: absolute;
+	left: 60px;
+	top: 10px;
+}
+.bottom_part{
+	margin: 0 auto;
+	width: 70%;
+	height: 500px;
+}
+.fenge{
+	width: 100%;
+	height: 40px;
+	border-bottom: darkgrey solid 1px;
+	margin-bottom: 20px;
+}
+#re_num{
+	font-size: 12px;
+}
+.write_remark{
+	position: relative;
+	width: 100%;
+	height: 250px;
+}
+.touxiang{
+	height: 250px;
+	width: 8%;
+}
+.touxiang img{
+	height: 60px;
+}
+.w_right{
+	position: absolute;
+	top: 0;
+	left: 8%;
+	float: left;
+	height: 250px;
+	width: 92%;
+}
+.w_top{
+	outline: none;
+	resize: none;
+	font-weight: 600;
+	color: darkgrey;
+	border:lightgrey solid 1px;
+	width: 100%;
+	height: 150px;
+}
+.w_bottom{
+	margin-top: 5px;
+	width: 100%;
+	height: 50px;
+}
+.xiaolian{
+	height: 30px;
+	width: 30px;
+	line-height: 30px;
+	float: left;
+}
+#words_num{
+	color: gray;
+	font-size: 14px;
+	height: 30px;
+	line-height: 30px;
+	width: 100px;
+	float:right;
+}
+#re_button{
+	float: right;
+	border: 0;
+	color: white;
+	background: darkorange;
+	height: 30px;
+	width: 80px;
+}
+.remark_scan{
+	position: relative;
+	height: 360px;
+	width: 100%;
+}
+.fenye{
+	display: flex;
+	margin: 20px auto;
+	width: 40%;
+	justify-content: center;
+}
+#fenyeblock{
+	display: flex;
+	justify-content: space-between;
+}
+.ball{
+	margin: 0 2px;
+	line-height: 30px;
+	text-align: center;
+	background: gainsboro;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+}
+.small:first-child{
+	background: orange;
+}
+.re_scan{
+	margin-bottom: 20px;
+	position: relative;
+	border-bottom: lightgrey solid 1px;
+	height: 100px;
+}
+.re_right{
+	position: absolute;
+	top: 0;
+	left: 8%;
+	float: left;
+	height: 100px;
+	width: 92%;
+}
+.re_touxiang{
+	height: 100px;
+	width: 8%;
+}
+.re_touxiang img{
+	height: 60px;
+	width: 60px;
+}
+.re_top{
+	width: 100%;
+	height: 30px;
+}
+.re_name{
+	font-size: 18px;
+	float: left;
+	color: darkorange;
+}
+.re_share{
+	font-size: 14px;
+	float: right;
+}
+.re_text{
+	font-size: 14px;
+	height: 40px;
+	width: 100%;
+}
+.re_con{
+	width: 100%;
+	height: 20px;
+}
+.re_time{
+	float: left;
+	font-size: 13px;
+}
+.re_dele{
+	font-size: 14px;
+	width: 50px;
+	float: right;
+}
+.re_anser{	
+	font-size: 14px;
+	float: right;
+}
+#nore{
+	top: 150px;
+	font-size: 30px;
+	left: 40%;
+	text-align: center;
+	display: none;
+	position: absolute;
+	margin: auto;
+	width: 30%px;
+	height: 50px;
+}
